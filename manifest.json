@@ -1,0 +1,15 @@
+{
+  "name": "rmic ynab extension",
+  "version": "0.0.1",
+  "description": "My ynab extension",
+  "permissions": ["activeTab"],
+  "content_scripts": [
+    {
+      "matches": ["https://app.youneedabudget.com/*/budget/*"],
+      "css": ["ynab_ext.css"],
+      "js": ["contentScript.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "manifest_version": 2
+}
